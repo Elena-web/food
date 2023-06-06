@@ -1,0 +1,120 @@
+.order {    
+    width: 100%;
+    height: 100vh;
+    padding: 5px 0;
+}
+
+.order h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    @include media-mobilesmall {
+        font-size: 35px;
+    }
+}
+
+.order h1 span {
+    color: $color-add;
+    margin-left: 10px;
+}
+
+.order__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 15px;
+}
+
+.order__img img {
+    width: 650px;
+    @include media-laptop {
+        width: 450px;
+        height: auto;
+    }
+    @include media-tablet {
+        width: 250px;
+    }
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.order__form {
+    width: 50%;
+    height: 620px;
+    background: $color-bg-form;
+    padding: 15px 20px 0 20px;
+    border-radius: 10px;
+    @include media-tablet {
+        width: 60%;
+    }
+    @include media-mobile {
+        width: 100%;
+    }    
+}
+
+.order__form h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.order__list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;    
+    margin-bottom: 30px;
+}
+
+.order__left {
+    width: 45%;
+}
+
+.order__right {
+    width: 45%;    
+}
+
+.order__list p {
+   margin-bottom: 5px;
+   @include media-mobilesmall {
+        font-size: 13px;
+   } 
+}
+
+.order__list input {    
+    width: 100%;
+    border: 2px solid $color-add;
+    border-radius: 5px;
+    outline: none;
+    color: $color-text;
+    padding: 10px 5px;
+    margin-bottom: 15px;    
+}
+
+.order__list textarea {
+    width: 100%;
+    height: 200px;
+    border: 2px solid $color-add;
+    border-radius: 5px;
+    outline: none;
+    color: $color-text;
+    background: none;
+    padding: 10px 5px;
+    padding: 10px 5px;
+}
+
+.oder__btn {
+    padding: 10px 20px;
+    border: 2px solid $color-add;
+    text-decoration: none;
+    color: $color-light;
+    background: $color-add;
+}
+
+.oder__btn i {
+    margin-right: 8px;
+}
+
+

@@ -1,0 +1,126 @@
+header {    
+    width: 100%;
+    height: auto;
+    padding: 20px 0 20px 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+    background-color: #fff;    
+}
+
+.logo {
+    width: 20%;
+    cursor: pointer;
+    @include media-mobilesmall {
+        width: 30%;
+    }
+}
+
+.logo img {
+    width: 100%;
+    height: auto;   
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    font-family: 'Raleway', Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500; 
+    @include media-mobile {
+        font-size: 12px;
+    }   
+    @include media-mobilesmall {
+        display: none;
+    } 
+}
+
+.nav__list * {
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.nav__list li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 1.5em;
+    overflow: hidden;
+    color: $color-text;
+    @include media-tabletbig {
+        margin: 0 .5em;
+    }  
+    @include media-mobile {
+        margin: 0 .3em;
+    } 
+}
+
+.nav__list a {
+    padding: 0.3em 0;
+    color: $color-text;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav__list a:before,
+.nav__list a:after {    
+    position: absolute;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.nav__list a:before {
+    bottom: 100%;
+    display: block;
+    height: 3px;
+    width: 100%;
+    content: "";
+    background-color: #e67e22;
+}
+
+.nav__list a:after {
+    padding: 0.3em 0;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    content: attr(data-hover);    
+    white-space: nowrap;
+}
+
+.nav__list li:hover a,
+.nav__list .current a {
+    transform: translateY(100%);
+}
+
+.nav .login a {
+    text-transform: uppercase;
+    color: $color-text;
+    text-decoration: none;
+    @extend %transition;
+    border: 2px solid $color-add;
+    border-radius: 20px;
+    padding: 7px 20px;
+    @include media-mobile {
+        font-size: 12px;
+    }   
+}
+
+.nav .login a:hover {
+    background: $color-add;
+    color: $color-light;
+}
+
+
+

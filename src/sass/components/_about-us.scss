@@ -1,0 +1,187 @@
+.about-us {
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0 0 0;
+    background-image: url(../../img/about_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    @include media-tablet {
+        height: 80vh;
+        padding: 60px 0 0 0;
+    }
+    @include media-mobile {
+        height: 100vh;
+    }    
+}
+
+.about-us__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 70px 15px 0;
+    @include media-tabletbig {
+        padding-top: 100px;
+    }
+    @include media-tablet {
+        padding-top: 60px;
+    }
+    @include media-mobile {
+        padding-top: 80px;
+    }    
+}
+
+.about-us__image {
+    width: 650px;
+    @include media-laptop {
+        width: 450px;
+    }
+    @include media-mobile {
+        padding-top: 35px; 
+    }   
+}
+
+.about-us__image img {    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-us__text {
+    width: 50%;
+}
+
+.about-us__text h3{
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    bottom: 10px;
+    font-size: 25px;
+}
+
+.about-us__text p {
+    font-family: 'Raleway', sans-serif;
+        
+    line-height: 23px;
+    margin-top: 20px; 
+    @include media-mobile {
+        margin-top: 5px; 
+    }   
+}
+
+.about-us__services {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include media-laptop {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+    }    
+    @include media-tabletbig{        
+        display: flex;
+        flex-direction: column;        
+    }
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.about-us__services .s_1 {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    background: $color-bg-light;
+    padding: 10px;
+    border: 2px solid $color-add;
+    cursor: pointer;
+    @include media-laptop {
+        width: 95%;
+    }
+    @include media-tabletbig {
+        width: 185px;
+    }
+}
+
+.about-us__services .s_1 i {
+    color: $color-text;
+    margin: 5px 10px 5px 5px;
+    font-size: 20px;
+    @extend %transition;
+}
+
+.about-us__services .s_1:hover i {
+    color: $color-add;
+}
+
+.about-us__services .s_1 a {
+    font-family: 'Raleway', sans-serif;
+    color: $color-text;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.about-us__btn {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    top: 35px;
+    padding: 10px 20px;
+    border: 2px solid $color-add;
+    text-decoration: none;
+    color: $color-text;
+    z-index: 5;
+    @extend %transition;
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.about-us__btn i {
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.about-us__btn:hover {
+    color: $color-light;
+}
+
+.about-us__btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $color-add;
+    z-index: -1;
+    @extend %transition;
+}
+
+.about-us__btn:hover::before {
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+.about__services.mob {  
+    display: none;
+    @include media-mobile {
+        display: block;
+        width: 80%;
+        margin: 20px auto 0;
+        display: block;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    @include media-mobilesmall {
+        width: 70%;
+        gap: 8px;
+    }    
+}
+
+.about__services.mob .s_1 {
+    width: auto;
+}
+
+.about__services.mob .s_1 a {
+    font-size: 16px;
+}

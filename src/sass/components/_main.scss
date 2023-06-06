@@ -1,0 +1,147 @@
+section .main {    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 80px; 
+    margin: 0 auto;
+    @include media-tabletbig {
+        top: 0;
+    }     
+}
+
+.main__text {
+    width: 45%;
+    @include media-mobile {        
+        display: none;
+    }
+}
+
+.main__text h1 {
+    font-family: 'Raleway', sans-serif;
+    color: $color-text;
+    font-size: 75px;
+    position: relative;
+    top: -25px;
+    left: 5%;
+    @include media-laptop {
+        top: 0;
+    }
+    @include media-tabletbig {
+        font-size: 55px;
+        position: relative;          
+    }    
+}
+
+.main__text h1 span {
+    color: $color-add;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 15px;
+}
+
+.main__text p {
+    font-family: 'Raleway', sans-serif;
+    color: $color-text;    
+    position: relative;
+    top: 20px;
+    left: 5%;
+    line-height: 23px;
+    text-align: justify;    
+}    
+
+.main__text .btn i {
+    margin-right: 8px;
+}
+
+.main__text .btn {
+    font-family: 'Raleway', sans-serif;
+    color: $color-text;
+    text-decoration: none;
+    border: 2px solid $color-add;
+    padding: 10px 20px;
+    position: relative;
+    top: 100px;
+    left: 5%;
+    @extend %transition;
+    @include media-tabletbig {
+        top: 60px;
+    }
+    @include media-mobile {
+        top: 70px;
+        left: 35%;
+    }
+}
+
+.main__text .btn:hover {
+    color: $color-light;
+}
+
+.main__text .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $color-add;
+    z-index: -1;
+    @extend %transition;
+}
+
+.main__text .btn:hover::before {
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+.main__image img {    
+    width: 100%;
+    animation: animate 5s linear infinite;
+}
+
+.main__image {
+    width: 45%;
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.main__text.mob {
+    display: none;
+    @include media-mobile {
+        display: block;
+        width: 85%;
+    }    
+}
+
+.main__text.mob h1 {
+    font-size: 45px;
+    left: 0;
+}
+
+.main__text.mob p {
+    left: 0;
+}
+
+.main__text.mob .main__image {   
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 50px auto 0 auto;    
+}
+
+.main__text.mob .main__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main__text.mob .btn {
+    top: 40px;
+    @include media-mobilesmall {
+        left: 0;
+    }
+}
+
+

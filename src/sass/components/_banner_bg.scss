@@ -1,0 +1,31 @@
+.banner_bg {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../../img/banner_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    @include media-mobilesmall {
+        height: 30vh;
+    }
+}
+
+.banner_bg h1 {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    position: relative;
+    top: 50%;
+    color: $color-light;
+    @include media-mobilesmall {
+        font-size: 35px;
+    }
+}
+
+.banner_bg h1 span {
+    font-family: 'Raleway', sans-serif;
+    color: $color-add;
+    margin-right: 15px;
+    margin-left: 15px;
+}
